@@ -1,18 +1,41 @@
 project:
   type: default
-  output-dir: _output
+  render:
+    clean: true
+  resources:
+    - styles/
+    - assets/
 
 format:
   html:
     theme: cosmo
-    css: styles/brief.scss
+    css: styles/report-html.scss
+    output-dir: _output/html
     toc: false
+    page-layout: full
     smooth-scroll: true
     embed-resources: true
+    pdf-engine: chromium
 
   pdf:
     documentclass: article
     geometry: "margin=0.75in"
     keep-tex: false
+    output-dir: _output/pdf
     toc: false
     number-sections: false
+    include-in-header: styles/latex-preamble.tex
+
+params:
+  program: "<program>"
+  report_date: "2026-01-01"
+  period: "quarter"
+
+execute:
+  echo: false
+  warning: false
+  message: false
+
+extensions:
+  - shafayetShafee/bsicons
+#  - filter/your-filter.lua (placeholder in case a filter is added)
