@@ -1,15 +1,15 @@
 project:
+  title: "Quarto Minimal Working Example Project"
   type: default
-  render:
-    clean: true
   resources:
     - styles/
     - assets/
 
 format:
   html:
-    theme: cosmo
-    css: styles/report-html.scss
+    theme: styles/report-html.scss
+    css: 
+      - styles/fontawesome/css/all.min.css
     output-dir: _output/html
     toc: false
     page-layout: full
