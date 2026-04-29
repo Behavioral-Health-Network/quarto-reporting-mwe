@@ -1,25 +1,5 @@
 ---
 title: "Quarto Reporting Minimal Working Example"
-format:
-  html:
-    theme: styles/brief.scss
-    css:
-      - styles/fontawesome/css/all.min.css
-    toc: false
-    page-layout: full
-    pdf-engine: chromium
-execute:
-  echo: false
-  warning: false
-  message: false
-
-extensions:
-  - shafayetShafee/bsicons
-
-params:
-  report_date: "2026-01-01"
-  fiscal_system: "state"
-  period: "quarter"
 ---
 
 # Quarto Reporting Minimal Working Example
@@ -395,10 +375,19 @@ Use one of the following:
 
 ## Inline Alignment
 
+### Basic Inline Alignment
 Use `icon-inline` when placing an icon before text:
 
 <i class="fa-solid fa-circle-info icon icon-inline icon-md"></i>
 Important Note
+
+### Inline Font Awesome Icon in Markdown Section Header
+
+## <i class="fa-solid fa-chart-line"></i> Engagement Trends
+
+### Inline Bootstrap Icon in Markdown Section Header
+
+## <i class="bi bi-people-fill"></i> Client Demographics
 
 ---
 
